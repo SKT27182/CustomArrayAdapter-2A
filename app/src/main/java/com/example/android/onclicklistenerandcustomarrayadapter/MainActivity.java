@@ -16,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Create a  TextView variable t1
+        //Create a  TextView variable t1 and assign the View in which we want to perform the Action
         TextView t1 = (TextView) findViewById(R.id.display);
 
-        //Set a onClickListener on t1
+        //Set a onClickListener on that View
         t1.setOnClickListener(new View.OnClickListener() {
             @Override
 
