@@ -1,0 +1,2 @@
+rootProject.name = "onClickListener AND CustomArrayAdapter"
+include ':app'
