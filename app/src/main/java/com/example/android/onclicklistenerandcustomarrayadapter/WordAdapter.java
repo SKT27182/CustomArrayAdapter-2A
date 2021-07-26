@@ -30,22 +30,36 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
 
 
+        //Assign the convertView to listView
         View listItemView = convertView;
 
+
+        //Checking whether the listView is null <in start it is always null> so then filling the list automatically
         if (listItemView == null){
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_view, parent, false);
         }
 
+
+        //Getting the position of the listView
         Word currentWord = getItem(position);
 
+
+        //getting the spanText in the TextView span
         TextView span =  (TextView) listItemView.findViewById(R.id.spanText);
+
+        //calling the spanTranslation method from Word Object at the currentWord position and then setting it to above TextView
         span.setText(currentWord.getSpanTranslation());
 
 
 
+        //getting the defaultText in the TextView def
         TextView def =  (TextView) listItemView.findViewById(R.id.defaultText);
+
+        //calling the defaultTranslation method from Word Object at the currentWord position and then setting it to above TextView
         def.setText(currentWord.getDefaultTranslation());
 
+
+        //returning the listView
         return listItemView;
 
     }

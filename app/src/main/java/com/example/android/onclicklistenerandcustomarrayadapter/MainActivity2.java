@@ -23,7 +23,7 @@ public class MainActivity2 extends AppCompatActivity {
         words.add(new Word("One","Two"));
 
 
-        //Created a ArrayAdapter
+        //Created a WordAdapter
         WordAdapter adapter = new WordAdapter(this,  words);
 
         //Created a ListView variable
