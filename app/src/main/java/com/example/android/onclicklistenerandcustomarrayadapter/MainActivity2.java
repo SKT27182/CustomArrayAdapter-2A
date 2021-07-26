@@ -16,16 +16,15 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         //Created a Array List words
-        ArrayList<String> words = new ArrayList<String>();
+        ArrayList<Word> words = new ArrayList<Word>();
 
 
-        //Added a String to the ArrayList
-        words.add("One");
-        words.add("Two");
+        //Added a String to the ArrayList of dataType Word
+        words.add(new Word("One","Two"));
 
 
         //Created a ArrayAdapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,words);
+        WordAdapter adapter = new WordAdapter(this,  words);
 
         //Created a ListView variable
         ListView listView = (ListView) findViewById(R.id.list_item);
